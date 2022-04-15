@@ -1,0 +1,89 @@
+nav {
+	border-radius: 10px;
+	margin: auto;
+	max-width: 1000px;
+	background-color: var(--bg-color2);
+	box-shadow: 0 3px 15px var(--box-shadow-color);
+}
+
+nav::after {
+	display: block;
+}
+
+nav ul {
+	display: grid;
+	grid-gap: 5px 5px;
+	grid-template-columns: repeat(4, auto);
+	list-style: none;
+	padding: 0px;
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+}
+
+nav ul li a {
+	display: grid;
+	text-align: center;
+	color: var(--color-font3);
+	text-decoration: none;
+	padding: 20px 49px;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+	border-radius: 10px;
+	background-color: var(--bg-color3);
+	color: var(--color-font4);
+}
+
+nav ul li a:focus {
+	color: var(--color-font4);
+}
+
+nav ul li a:not(:only-child)::after {
+	padding-left: 4px;
+}
+
+nav ul li ul {
+	margin-left: -42px;
+	list-style: none;
+	position: absolute;
+	display: none;
+	z-index: 5;
+}
+
+nav ul li:hover ul {
+	display: block;
+	border-radius: 10px;
+	margin: auto;
+	max-width: 1000px;
+	background-color: var(--bg-color2);
+	box-shadow: 0px 3px 15px var(--box-shadow-color);
+}
+
+nav ul li ul li {
+	display: grid;
+	position: relative;
+	border: 2px solid transparent;
+}
+
+nav ul li ul li a {
+	text-align: center;
+	min-width: 150px;
+}
+
+nav ul li ul li a:hover, nav ul li ul li a:focus {
+	background-color: var(--bg-color3);
+	color: var(--color-font4);
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	background-color: var(--bg-color1);
+	box-shadow: 0 4px 10px var(--box-shadow-color);
+}
